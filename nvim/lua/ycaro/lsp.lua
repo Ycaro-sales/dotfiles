@@ -51,6 +51,18 @@ cmp.setup({
     end
   },
 
+  sorting =  {
+    comparators = {
+      cmp.config.compare.offset,
+      cmp.config.compare.exact,
+      cmp.config.compare.score,
+      cmp.config.compare.kind,
+      cmp.config.compare.sort_text,
+      cmp.config.compare.length,
+      cmp.config.compare.order,
+    }
+  },
+
   snippet = {
     expand = function(args)
       require('luasnip').lsp_expand(args.body)
@@ -97,3 +109,5 @@ require("luasnip/loaders/from_vscode").load()
 
 require'lspconfig'.tsserver.setup {}
 require'lspconfig'.pyright.setup{}
+require'lspconfig'.cssls.setup{}
+require'lspconfig'.html.setup{}

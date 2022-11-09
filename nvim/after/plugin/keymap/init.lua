@@ -11,7 +11,8 @@ nnoremap("<leader>ff", "<cmd>Telescope find_files<CR>")
 nnoremap("<leader>fg", "<cmd>Telescope live_grep<CR>")
 nnoremap("<leader>fb", "<cmd>Telescope buffers<CR>")
 nnoremap("<leader>fh", "<cmd>Telescope help_tags<CR>")
-nnoremap("<leader>fe", "<cmd>Telescope file_broswer<CR>")
+nnoremap("<leader>fe", "<cmd>Telescope git_files<CR>")
+
 
 --Keybinds harpoon 
 nnoremap("<leader>m", "<cmd>lua require(\"harpoon.mark\").add_file()<CR>")
@@ -31,9 +32,14 @@ nnoremap("<leader>bc", "<cmd>BrowserStop<CR>")
 nnoremap("<leader>br", "<cmd>BrowserRestart<CR>")
 nnoremap("<leader>bp", "<cmd>BrowserPreview<CR>")
 
+--Formatters
+nnoremap("<leader>ff", "<cmd>vim.lsp.buf.formatting_sync()<CR>")
+
 --Keybinds salvar e sair
 nnoremap("<C-q>", "<cmd>:q<CR>")
 nnoremap("<C-s>", "<cmd>:w<CR>")
+
+inoremap("<C-s>", "<Esc><cmd>:w<CR>")
 
 --keybinds nvim-tree
 nnoremap("<leader>e","<cmd>NvimTreeToggle<CR>")

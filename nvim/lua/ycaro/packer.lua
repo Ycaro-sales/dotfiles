@@ -26,13 +26,14 @@ return require('packer').startup(function()
      }
 
      use "nvim-treesitter/nvim-treesitter-textobjects"
-     use { "nvim-telescope/telescope-file-browser.nvim" }
+     use "nvim-telescope/telescope-file-browser.nvim"
      use 'm-demare/hlargs.nvim'
 
      --use 'sharkdp/fd'
      use 'windwp/nvim-ts-autotag'
 
      --Tools
+     use "jose-elias-alvarez/null-ls.nvim"
      use "ray-x/web-tools.nvim"
      use "ThePrimeagen/harpoon"
      use "ggandor/lightspeed.nvim"
@@ -42,6 +43,7 @@ return require('packer').startup(function()
          require("which-key").setup {}
        end
      }
+     use "mg979/vim-visual-multi"
 
      --ui
      use {
