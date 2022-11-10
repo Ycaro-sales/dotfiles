@@ -32,8 +32,11 @@ nnoremap("<leader>bc", "<cmd>BrowserStop<CR>")
 nnoremap("<leader>br", "<cmd>BrowserRestart<CR>")
 nnoremap("<leader>bp", "<cmd>BrowserPreview<CR>")
 
+
+nnoremap("<leader>gr", "<cmd>Terminal git reset --hard HEAD<CR>")
+
 --Formatters
-nnoremap("<leader>ff", "<cmd>vim.lsp.buf.formatting_sync()<CR>")
+nnoremap("<leader>pf", "<cmd>vim.lsp.buf.format()<CR>")
 
 --Keybinds salvar e sair
 nnoremap("<C-q>", "<cmd>:q<CR>")

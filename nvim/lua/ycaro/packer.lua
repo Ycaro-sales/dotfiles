@@ -44,6 +44,7 @@ return require('packer').startup(function()
        end
      }
      use "mg979/vim-visual-multi"
+     use "tpope/vim-fugitive"
 
      --ui
      use {
