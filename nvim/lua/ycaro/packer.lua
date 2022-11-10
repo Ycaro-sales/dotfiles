@@ -3,8 +3,12 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
      use 'wbthomason/packer.nvim'
      use 'nvim-lua/plenary.nvim'
+
+     --Telescope
      use 'nvim-telescope/telescope.nvim'
-     
+     use "cljoly/telescope-repo.nvim"
+     use "nvim-telescope/telescope-file-browser.nvim"
+
      --syntax
      use {
           'nvim-treesitter/nvim-treesitter',
@@ -26,7 +30,6 @@ return require('packer').startup(function()
      }
 
      use "nvim-treesitter/nvim-treesitter-textobjects"
-     use "nvim-telescope/telescope-file-browser.nvim"
      use 'm-demare/hlargs.nvim'
 
      --use 'sharkdp/fd'
@@ -45,7 +48,6 @@ return require('packer').startup(function()
      }
      use "mg979/vim-visual-multi"
      use "tpope/vim-fugitive"
-
      --ui
      use {
        'nvim-lualine/lualine.nvim',

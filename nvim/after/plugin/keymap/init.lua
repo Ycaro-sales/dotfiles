@@ -7,11 +7,21 @@ local nmap = Remap.nmap
 
 
 --Keybinds Telescope
+nnoremap("<leader>f", "<cmd>Telescope<CR>")
 nnoremap("<leader>ff", "<cmd>Telescope find_files<CR>")
 nnoremap("<leader>fg", "<cmd>Telescope live_grep<CR>")
 nnoremap("<leader>fb", "<cmd>Telescope buffers<CR>")
 nnoremap("<leader>fh", "<cmd>Telescope help_tags<CR>")
 nnoremap("<leader>fe", "<cmd>Telescope git_files<CR>")
+
+nnoremap("<leader>gc", "<cmd>Telescope git_commits<CR>")
+nnoremap("<leader>gcb", "<cmd>Telescope git_bcommits<CR>")
+nnoremap("<leader>gs", "<cmd>Telescope git_status<CR>")
+nnoremap("<leader>gst", "<cmd>Telescope git_stash<CR>")
+nnoremap("<leader>gb", "<cmd>Telescope git_branches<CR>")
+
+nnoremap("gd", "<cmd>Telescope lsp_definitions<CR>")
+nnoremap("gi", "<cmd>Telescope lsp_implementations<CR>")
 
 
 --Keybinds harpoon 
@@ -32,8 +42,6 @@ nnoremap("<leader>bc", "<cmd>BrowserStop<CR>")
 nnoremap("<leader>br", "<cmd>BrowserRestart<CR>")
 nnoremap("<leader>bp", "<cmd>BrowserPreview<CR>")
 
-
-nnoremap("<leader>gr", "<cmd>Terminal git reset --hard HEAD<CR>")
 
 --Formatters
 nnoremap("<leader>pf", "<cmd>vim.lsp.buf.format()<CR>")
