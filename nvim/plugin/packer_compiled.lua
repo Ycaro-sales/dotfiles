@@ -79,6 +79,11 @@ _G.packer_plugins = {
     path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["blamer.nvim"] = {
+    loaded = true,
+    path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/blamer.nvim",
+    url = "https://github.com/APZelos/blamer.nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -138,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/hlargs.nvim",
     url = "https://github.com/m-demare/hlargs.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
+    url = "https://github.com/lukas-reineke/indent-blankline.nvim"
   },
   ["lightspeed.nvim"] = {
     loaded = true,
@@ -206,6 +216,11 @@ _G.packer_plugins = {
     path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["nvim-treesitter-context"] = {
+    loaded = true,
+    path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/nvim-treesitter-context",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-context"
+  },
   ["nvim-treesitter-textobjects"] = {
     loaded = true,
     path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
@@ -220,6 +235,12 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
+  ["octo.nvim"] = {
+    config = { "\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tocto\frequire\0" },
+    loaded = true,
+    path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/octo.nvim",
+    url = "https://github.com/pwntester/octo.nvim"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -240,6 +261,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
     url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
+  ["telescope-fzf-native.nvim"] = {
+    loaded = true,
+    path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
+    url = "https://github.com/nvim-telescope/telescope-fzf-native.nvim"
+  },
+  ["telescope-repo.nvim"] = {
+    loaded = true,
+    path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/telescope-repo.nvim",
+    url = "https://github.com/cljoly/telescope-repo.nvim"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -262,6 +293,11 @@ _G.packer_plugins = {
     path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-repeat"] = {
+    loaded = true,
+    path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/vim-repeat",
+    url = "https://github.com/tpope/vim-repeat"
+  },
   ["vim-visual-multi"] = {
     loaded = true,
     path = "/home/ycaro/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
@@ -281,22 +317,26 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: toggleterm.nvim
-time([[Config for toggleterm.nvim]], true)
-try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
-time([[Config for toggleterm.nvim]], false)
 -- Config for: nvim-surround
 time([[Config for nvim-surround]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
 time([[Config for nvim-surround]], false)
--- Config for: which-key.nvim
-time([[Config for which-key.nvim]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
-time([[Config for which-key.nvim]], false)
+-- Config for: octo.nvim
+time([[Config for octo.nvim]], true)
+try_loadstring("\27LJ\2\n2\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\tocto\frequire\0", "config", "octo.nvim")
+time([[Config for octo.nvim]], false)
 -- Config for: nvim-autopairs
 time([[Config for nvim-autopairs]], true)
 try_loadstring("\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0", "config", "nvim-autopairs")
 time([[Config for nvim-autopairs]], false)
+-- Config for: toggleterm.nvim
+time([[Config for toggleterm.nvim]], true)
+try_loadstring("\27LJ\2\n8\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\15toggleterm\frequire\0", "config", "toggleterm.nvim")
+time([[Config for toggleterm.nvim]], false)
+-- Config for: which-key.nvim
+time([[Config for which-key.nvim]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14which-key\frequire\0", "config", "which-key.nvim")
+time([[Config for which-key.nvim]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then

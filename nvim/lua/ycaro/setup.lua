@@ -21,6 +21,8 @@ require("telescope").setup {
 }
 require("telescope").load_extension ("file_browser")
 require("telescope").load_extension ("harpoon")
+require("telescope").load_extension( "repo" )
+require("telescope").load_extension('fzf')
 
 require'web-tools'.setup({
   keymaps = {
@@ -40,3 +42,4 @@ require("toggleterm").setup{
      open_mapping = [[<c-\>]],
      close_on_exit = true
 }
+require'treesitter-context'.setup()
