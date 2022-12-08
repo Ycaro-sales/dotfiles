@@ -25,11 +25,11 @@ nnoremap("gr", "<cmd>Telescope lsp_references<CR>")
 nnoremap("gi", "<cmd>Telescope lsp_implementations<CR>")
 nnoremap("<leader>o", "<cmd>Telescope lsp_document_symbols<CR>")
 
+nnoremap("<leader>s", "<cmd>AerialToggle!<CR>")
 
 --Keybinds harpoon 
 nnoremap("<leader>m", "<cmd>lua require(\"harpoon.mark\").add_file()<CR>")
 nnoremap("<C-e>", "<cmd>lua require(\"harpoon.ui\").toggle_quick_menu()<CR>")
-
 nnoremap("<C-h>", "<cmd>lua require(\"harpoon.ui\").nav_file(1)<CR>")
 nnoremap("<C-j>", "<cmd>lua require(\"harpoon.ui\").nav_file(2)<CR>")
 nnoremap("<C-k>", "<cmd>lua require(\"harpoon.ui\").nav_file(3)<CR>")

@@ -20,6 +20,7 @@ return require('packer').startup(function()
              require"octo".setup()
         end
    }
+   
   
    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
    --syntax
@@ -62,6 +63,10 @@ return require('packer').startup(function()
    use "mg979/vim-visual-multi"
    use "tpope/vim-fugitive"
    use "APZelos/blamer.nvim"
+   use {
+      'stevearc/aerial.nvim',
+      config = function() require('aerial').setup() end
+    }
    --ui
    use {
      'nvim-lualine/lualine.nvim',
@@ -80,6 +85,22 @@ return require('packer').startup(function()
    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
      require("toggleterm").setup()
    end}
+   use 'yamatsum/nvim-cursorline'
+   use {
+    "SmiteshP/nvim-navic",
+    requires = "neovim/nvim-lspconfig"
+   }
+   use {
+    "utilyre/barbecue.nvim",
+    requires = {
+      "neovim/nvim-lspconfig",
+      "smiteshp/nvim-navic",
+      "kyazdani42/nvim-web-devicons", -- optional
+    },
+    config = function()
+      require("barbecue").setup()
+    end,
+   }
 
    --Snippets
    use 'L3MON4D3/LuaSnip'
@@ -99,6 +120,7 @@ return require('packer').startup(function()
    use 'saadparwaiz1/cmp_luasnip'
    use "lukas-reineke/cmp-rg"
    use "lukas-reineke/cmp-under-comparator"    
+
 
    --Colorschemes
    use 'marko-cerovac/material.nvim'

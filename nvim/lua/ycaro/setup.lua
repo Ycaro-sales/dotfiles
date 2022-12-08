@@ -43,3 +43,16 @@ require("toggleterm").setup{
      close_on_exit = true
 }
 require'treesitter-context'.setup()
+
+require('nvim-cursorline').setup {
+  cursorline = {
+    enable = true,
+    timeout = 1000,
+    number = false,
+  },
+  cursorword = {
+    enable = true,
+    min_length = 3,
+    hl = { underline = true },
+  }
+}
