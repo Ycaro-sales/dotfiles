@@ -36,7 +36,7 @@ exec --no-startup-id nm-applet
 #set $refresh_i3status killall -SIGUSR1 i3status
 #bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
 #bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@toggle && $refresh_i3status
 #bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # use these keys for focus, movement, and resize directions when reaching for
@@ -185,25 +185,33 @@ mode "resize" {
 bindsym Mod1+r mode "resize"
 #Basic system funcitions
 ## Screenshots
-bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
+bindsym Print exec flameshot 
 bindsym Mod1+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
 bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
 
 ## Clipboard Screenshots
-bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
-bindsym Ctrl+Mod1+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
-bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+bindsym Ctrl+Print exec flameshot screen -r -c
+bindsym Ctrl+Mod1+Print exec --no-startup-id 
+bindsym Ctrl+Shift+Print exec --no-startup-id
 
 hide_edge_borders both
+
+# Toggle keyboards
+bindsym Mod1+space exec bash ~/.config/i3/toggle.sh
+
 # Opens APPs
 bindsym Mod1+g exec google-chrome 
-bindsym Mod1+p exec XDG_CURRENT_DESKTOP=GNOME gnome-control-center
+# Moving workspaces between screens 
+bindsym Mod1+p move workspace to output right
+
 bindsym Mod1+n exec notion-snap 
+bindsym Mod1+m exec nautilus --browser 
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 
 # finds out, if available)
 bar {
-     workspace_buttons no
+     position top
      status_command ~/.local/bin/bumblebee-status -m spotify disk memory pasink pasource datetime layout \
          -p time.format="%H:%M" -t gruvbox 
 }
@@ -218,4 +226,7 @@ bar {
 #
 # Please remove the following exec line:
 #######################################################################
-exec_always feh --bg-fill ~/Documentos/Wallpapers/wpp.png 
+exec_always feh --bg-fill ~/Documentos/Wallpapers/wallpaper.jpg
+exec --no-startup-id compton -b -f
+
+
