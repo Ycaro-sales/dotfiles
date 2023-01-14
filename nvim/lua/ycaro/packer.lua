@@ -26,7 +26,8 @@ return require('packer').startup(function()
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'm-demare/hlargs.nvim'
   use 'windwp/nvim-ts-autotag'
-  use { 'kylechui/nvim-surround', tag = '*', config = function() require('nvim-surround').setup({ }) end }
+  use 'hail2u/vim-css3-syntax'
+  use 'styled-components/vim-styled-components'
   use {'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' }}
   use({ 'Wansmer/treesj', config = function()
     require('treesj').setup({ use_default_keymaps = false })
@@ -47,10 +48,12 @@ return require('packer').startup(function()
   --Code Edition
   use 'mg979/vim-visual-multi'
   use { 'kylechui/nvim-surround', tag = '*', config = function() require('nvim-surround').setup({ }) end }
+  use 'tpope/vim-unimpaired'
   
   --Git
   use 'tpope/vim-fugitive'
   use 'APZelos/blamer.nvim'
+  use 'lewis6991/gitsigns.nvim'
 
   --UI
   use 'nvim-lualine/lualine.nvim'
@@ -59,13 +62,13 @@ return require('packer').startup(function()
   use 'yamatsum/nvim-cursorline'
   use 'kosayoda/nvim-lightbulb'
   use {'shortcuts/no-neck-pain.nvim', tag = '*' }
-  use { 'dnlhc/glance.nvim', config = function() require('glance').setup({ }) end }
   use {'akinsho/toggleterm.nvim', tag = '*', config = function() require('toggleterm').setup() end}
   use {
     'utilyre/barbecue.nvim',
     requires = { 'smiteshp/nvim-navic' },
     config = function() require('barbecue').setup() end,
   }
+  use 'ldelossa/nvim-ide'
 
   --Comments
   use 'tpope/vim-commentary'
@@ -112,5 +115,7 @@ return require('packer').startup(function()
   use 'marko-cerovac/material.nvim'
   use 'gruvbox-community/gruvbox'
   use 'folke/tokyonight.nvim'
+  use 'neanias/everforest-nvim'
+  use 'ful1e5/onedark.nvim'
   use { 'rose-pine/neovim', as = 'rose-pine' }
 end)

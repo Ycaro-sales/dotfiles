@@ -39,7 +39,6 @@ require("telescope").setup {
     path_display = { "truncate" },
     winblend = 0,
     border = {},
-    borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
     color_devicons = true,
     set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
     file_previewer = require("telescope.previewers").vim_buffer_cat.new,
@@ -66,16 +65,16 @@ require("telescope").setup {
       },
     },
     ["ui-select"] = {
-      require("telescope.themes").get_dropdown {
-      }
+      require("telescope.themes").get_dropdown {},
     }
   },
   pickers = {
     lsp_references = {show_line = false},
   }
 }
+require("telescope").load_extension("ui-select")
 require("telescope").load_extension("file_browser")
 require("telescope").load_extension("harpoon")
 require("telescope").load_extension("fzf")
-require("telescope").load_extension("ui-select")
 require("telescope").load_extension('dap')
+

@@ -10,10 +10,16 @@ require('rose-pine').setup({
 
 require("luasnip.loaders.from_vscode").lazy_load()
 
-require('lualine').setup()
+require('lualine').setup{
+  sections = {
+    lualine_b = {'branch', 'diagnostics'},
+    lualine_c = {},
+    lualine_x = {'filetype'},
+  }
+}
 
 require("toggleterm").setup{
-     open_mapping = [[<c-\>]],
+     open_mapping = [[<F1>]],
      close_on_exit = true
 }
 require'treesitter-context'.setup()
@@ -29,7 +35,7 @@ require('nvim-cursorline').setup {
     min_length = 3,
     hl = { underline = true },
   }
-} 
+}
 
 require("trouble").setup {
     position = "bottom", -- position of the list can be: bottom, top, left, right
