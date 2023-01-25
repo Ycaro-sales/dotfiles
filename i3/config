@@ -26,7 +26,7 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -56,9 +56,9 @@ bindsym Mod1+Return exec kitty
 bindsym Mod1+q kill
 
 # start dmenu (a program launcher)
-bindsym Mod1+d exec --no-startup-id dmenu_run
+ bindsym Mod1+d exec --no-startup-id dmenu_run
 # A more modern dmenu replacement is rofi:
-# bindsym Mod1+d exec "rofi -modi drun,run -show drun"
+# bindsym $mod+d exec rofi -lines 12 -padding 18 -width 60 -location 0 -show drun -sidebar-mode -columns 
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
 # bindsym Mod1+d exec --no-startup-id i3-dmenu-desktop
@@ -185,14 +185,8 @@ mode "resize" {
 bindsym Mod1+r mode "resize"
 #Basic system funcitions
 ## Screenshots
-bindsym Print exec flameshot 
-bindsym Mod1+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
-bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
-
-## Clipboard Screenshots
-bindsym Ctrl+Print exec flameshot screen -r -c
-bindsym Ctrl+Mod1+Print exec --no-startup-id 
-bindsym Ctrl+Shift+Print exec --no-startup-id
+bindsym Ctrl+Print exec flameshot gui
+bindsym Print exec flameshot screen -r -c
 
 hide_edge_borders both
 
@@ -216,6 +210,11 @@ bar {
          -p time.format="%H:%M" -t gruvbox 
 }
 
+# Gaps
+for_window [class=".*"] border pixel 0
+gaps outer 20
+gaps inner 20
+
 #######################################################################
 # automatically start i3-config-wizard to offer the user to create a
 # keysym-based config which used their favorite modifier (alt or windows)
@@ -226,7 +225,8 @@ bar {
 #
 # Please remove the following exec line:
 #######################################################################
-exec_always feh --bg-fill ~/Documentos/Wallpapers/wallpaper.jpg
+exec_always feh --bg-fill ~/Documentos/Wallpapers/dfnj7ke-591be106-0837-490f-b448-4d9be0830549.png
+exec_always flameshot
 exec --no-startup-id compton -b -f
 
 

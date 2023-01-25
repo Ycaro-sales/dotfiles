@@ -4,6 +4,9 @@ require('hlargs').setup()
 --setup do auto tag
 require('nvim-ts-autotag').setup()
 
+--setup autopairs
+require("nvim-autopairs").setup {}
+
 require('rose-pine').setup({
      dark_variant = 'moon'
 })

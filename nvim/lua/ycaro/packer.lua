@@ -44,12 +44,13 @@ return require('packer').startup(function()
   --Motion
   use 'ThePrimeagen/harpoon'
   use 'ggandor/lightspeed.nvim'
-  
+
   --Code Edition
   use 'mg979/vim-visual-multi'
   use { 'kylechui/nvim-surround', tag = '*', config = function() require('nvim-surround').setup({ }) end }
   use 'tpope/vim-unimpaired'
-  
+  use 'windwp/nvim-autopairs'
+
   --Git
   use 'tpope/vim-fugitive'
   use 'APZelos/blamer.nvim'

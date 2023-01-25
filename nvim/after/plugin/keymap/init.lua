@@ -13,7 +13,6 @@ vim.keymap.set("n","<leader>h", "<cmd>lua vim.lsp.buf.hover()<CR>")
 vim.keymap.set("n","<leader>c", "<cmd>lua vim.lsp.buf.code_action()<CR>")
 vim.keymap.set("n","<leader>C", "<cmd>CodeActionMenu<CR>")
 
-
 vim.keymap.set("n","<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<CR>")
 vim.keymap.set("n","<leader>xx", "<cmd>TroubleToggle document_diagnostics<CR>")
 vim.keymap.set("n","<leader>xq", "<cmd>TroubleToggle quickfix<CR>")
@@ -32,6 +31,7 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
+
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
