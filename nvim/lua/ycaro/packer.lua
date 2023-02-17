@@ -9,6 +9,7 @@ return require('packer').startup(function()
   use 'nvim-telescope/telescope.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'rcarriga/nvim-notify'
+  use 'frabjous/knap'
 
   --Telescope plugins
   use 'nvim-telescope/telescope-file-browser.nvim'
@@ -26,9 +27,7 @@ return require('packer').startup(function()
   use 'nvim-treesitter/nvim-treesitter-textobjects'
   use 'm-demare/hlargs.nvim'
   use 'windwp/nvim-ts-autotag'
-  use 'hail2u/vim-css3-syntax'
-  use 'styled-components/vim-styled-components'
-  use {'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' }}
+  use {('nvim-treesitter/nvim-treesitter'), { run = ':TSUpdate' } }
   use({ 'Wansmer/treesj', config = function()
     require('treesj').setup({ use_default_keymaps = false })
   end })
@@ -71,7 +70,7 @@ return require('packer').startup(function()
   }
   use 'ldelossa/nvim-ide'
 
-  --Comments
+  --Coments
   use 'tpope/vim-commentary'
   -- use 'epwalsh/obsidian.nvim'
   use 'folke/todo-comments.nvim'
@@ -111,6 +110,9 @@ return require('packer').startup(function()
   use 'jose-elias-alvarez/typescript.nvim'
   use { 'folke/trouble.nvim', config = function() require('trouble').setup { } end }
   use { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' }
+
+  --Preview
+  use 'frabjous/knap'
 
   --Colorschemes
   use 'marko-cerovac/material.nvim'

@@ -1,3 +1,4 @@
+local vim = vim
 --vim.opt.guicursor = ""
 vim.opt.clipboard = "unnamedplus"
 vim.notify = require("notify")
@@ -28,6 +29,9 @@ vim.opt.updatetime = 50
 
 vim.opt.wrap = false
 vim.g.mapleader = " "
+
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 
 vim.diagnostic.config({
   virtual_text = false
