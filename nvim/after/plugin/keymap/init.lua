@@ -18,6 +18,12 @@ vim.keymap.set("n","<leader>xx", "<cmd>TroubleToggle document_diagnostics<CR>")
 vim.keymap.set("n","<leader>xq", "<cmd>TroubleToggle quickfix<CR>")
 vim.keymap.set("n","<leader>xl", "<cmd>TroubleToggle loclist<CR>")
 
+
+-- vim.keymap.set("i","<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
+-- vim.keymap.set("s","<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
+-- vim.keymap.set("i","<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
+-- vim.keymap.set("s","<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
+
 --keybinds nvim-tree
 vim.keymap.set("n","<leader>e","<cmd>NvimTreeToggle<CR>")
 

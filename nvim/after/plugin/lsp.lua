@@ -1,10 +1,10 @@
 local lsp = require("lsp-zero")
+local luasnip = require("luasnip")
 
 lsp.preset("recommended")
 
 lsp.ensure_installed({ 'tsserver',
   'eslint',
-  'sumneko_lua',
   'rust_analyzer',
   'emmet_ls',
   'cssls',
@@ -20,6 +20,37 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
   ['<C-y>'] = cmp.mapping.confirm({ select = true }),
   ["<C-Space>"] = cmp.mapping.complete(),
+  ["<Tab>"] = cmp.mapping(function(fallback)
+    if cmp.visible() then
+      cmp.select_next_item()
+    elseif luasnip.expand_or_jumpable() then
+      luasnip.expand_or_jump()
+    else
+      fallback()
+    end
+  end, { "i", "s" }),
+
+  ["<S-Tab>"] = cmp.mapping(function(fallback)
+    if cmp.visible() then
+      cmp.select_prev_item()
+    elseif luasnip.jumpable(-1) then
+      luasnip.jump(-1)
+    else
+      fallback()
+    end
+  end, { "i", "s" }),
+
+  ["<C-j>"] = cmp.mapping(function(fallback)
+    if luasnip.jumpable(-1) then
+      luasnip.jump(-1)
+    end
+  end, {"i", "s"}),
+
+  ["<C-k>"] = cmp.mapping(function(fallback)
+    if luasnip.jumpable(1) then
+      luasnip.jump(1)
+    end
+  end, {"i", "s"})
 })
 
 lsp.set_preferences({
