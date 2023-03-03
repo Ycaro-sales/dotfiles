@@ -18,11 +18,10 @@ vim.keymap.set("n","<leader>xx", "<cmd>TroubleToggle document_diagnostics<CR>")
 vim.keymap.set("n","<leader>xq", "<cmd>TroubleToggle quickfix<CR>")
 vim.keymap.set("n","<leader>xl", "<cmd>TroubleToggle loclist<CR>")
 
-
--- vim.keymap.set("i","<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
--- vim.keymap.set("s","<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
--- vim.keymap.set("i","<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
--- vim.keymap.set("s","<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
+vim.keymap.set("i","<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
+vim.keymap.set("s","<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
+vim.keymap.set("i","<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
+vim.keymap.set("s","<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
 
 --keybinds nvim-tree
 vim.keymap.set("n","<leader>e","<cmd>NvimTreeToggle<CR>")
@@ -33,11 +32,11 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 vim.keymap.set("n", "J", "mzJ`z")
+vim.keymap.set("n", "J", "mzJ`z")
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
-
 
 vim.keymap.set("x", "<leader>p", [["_dP]])
 

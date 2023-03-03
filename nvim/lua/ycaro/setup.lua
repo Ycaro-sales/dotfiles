@@ -25,7 +25,6 @@ require("toggleterm").setup{
      open_mapping = [[<F1>]],
      close_on_exit = true
 }
-require'treesitter-context'.setup()
 
 require('nvim-cursorline').setup {
   cursorline = {

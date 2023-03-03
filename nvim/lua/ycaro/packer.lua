@@ -9,25 +9,20 @@ return require('packer').startup(function()
   use 'nvim-telescope/telescope.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'rcarriga/nvim-notify'
-  use 'frabjous/knap'
+  use {('nvim-treesitter/nvim-treesitter'), { run = ':TSUpdate' } }
 
   --Telescope plugins
-  use 'nvim-telescope/telescope-file-browser.nvim'
   use 'nvim-telescope/telescope-dap.nvim'
-  use 'nvim-telescope/telescope-frecency.nvim'
   use 'nvim-telescope/telescope-ui-select.nvim'
-  use { 'pwntester/octo.nvim', config = function () require'octo'.setup() end }
   use {
     'nvim-telescope/telescope-fzf-native.nvim',
     run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
   }
 
   --Treesitter
-  use 'nvim-treesitter/nvim-treesitter-context'
   use 'nvim-treesitter/nvim-treesitter-textobjects'
-  use 'm-demare/hlargs.nvim'
+  use "m-demare/hlargs.nvim"
   use 'windwp/nvim-ts-autotag'
-  use {('nvim-treesitter/nvim-treesitter'), { run = ':TSUpdate' } }
   use({ 'Wansmer/treesj', config = function()
     require('treesj').setup({ use_default_keymaps = false })
   end })
@@ -40,19 +35,22 @@ return require('packer').startup(function()
     end
   }
 
+  <div>
+    print()
+  </div>
+
   --Motion
   use 'ThePrimeagen/harpoon'
   use 'ggandor/lightspeed.nvim'
 
   --Code Edition
+  use 'windwp/nvim-autopairs'
   use 'mg979/vim-visual-multi'
   use { 'kylechui/nvim-surround', tag = '*', config = function() require('nvim-surround').setup({ }) end }
   use 'tpope/vim-unimpaired'
-  use 'windwp/nvim-autopairs'
 
   --Git
   use 'tpope/vim-fugitive'
-  use 'APZelos/blamer.nvim'
   use 'lewis6991/gitsigns.nvim'
 
   --UI
@@ -61,7 +59,6 @@ return require('packer').startup(function()
   use 'nvim-tree/nvim-tree.lua'
   use 'yamatsum/nvim-cursorline'
   use 'kosayoda/nvim-lightbulb'
-  use {'shortcuts/no-neck-pain.nvim', tag = '*' }
   use {'akinsho/toggleterm.nvim', tag = '*', config = function() require('toggleterm').setup() end}
   use {
     'utilyre/barbecue.nvim',
@@ -72,8 +69,6 @@ return require('packer').startup(function()
 
   --Coments
   use 'tpope/vim-commentary'
-  -- use 'epwalsh/obsidian.nvim'
-  use 'folke/todo-comments.nvim'
 
   --Snippets
   use 'L3MON4D3/LuaSnip'
