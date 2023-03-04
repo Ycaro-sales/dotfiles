@@ -48,7 +48,4 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-
-
-
-
+vim.keymap.set("n","<leader>g", "<cmd>FloatermNew lazygit<CR>")

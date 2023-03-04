@@ -35,10 +35,6 @@ return require('packer').startup(function()
     end
   }
 
-  <div>
-    print()
-  </div>
-
   --Motion
   use 'ThePrimeagen/harpoon'
   use 'ggandor/lightspeed.nvim'
@@ -66,6 +62,7 @@ return require('packer').startup(function()
     config = function() require('barbecue').setup() end,
   }
   use 'ldelossa/nvim-ide'
+  use 'voldikss/vim-floaterm'
 
   --Coments
   use 'tpope/vim-commentary'
