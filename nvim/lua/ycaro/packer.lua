@@ -37,7 +37,7 @@ return require('packer').startup(function()
 
   --Motion
   use 'ThePrimeagen/harpoon'
-  use 'ggandor/lightspeed.nvim'
+  --use 'ggandor/lightspeed.nvim'
 
   --Code Edition
   use 'windwp/nvim-autopairs'
