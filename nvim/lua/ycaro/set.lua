@@ -29,7 +29,6 @@ vim.opt.updatetime = 50
 
 
 vim.opt.wrap = false
-vim.g.mapleader = " "
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
