@@ -1,6 +1,3 @@
---setup do hlargs
-require('hlargs').setup()
-
 --setup do auto tag
 require('nvim-ts-autotag').setup()
 
@@ -24,19 +21,6 @@ require('lualine').setup{
 require("toggleterm").setup{
      open_mapping = [[<F1>]],
      close_on_exit = true
-}
-
-require('nvim-cursorline').setup {
-  cursorline = {
-    enable = true,
-    timeout = 1000,
-    number = false,
-  },
-  cursorword = {
-    enable = true,
-    min_length = 3,
-    hl = { underline = true },
-  }
 }
 
 require("trouble").setup {
@@ -96,5 +80,4 @@ require("mason").setup({
       }
   }
 })
-require('nvim-lightbulb').setup({autocmd = {enabled = true}})
 

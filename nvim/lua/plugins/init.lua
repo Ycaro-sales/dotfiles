@@ -1,12 +1,12 @@
 return {
   'nvim-lua/plenary.nvim',
   'tpope/vim-repeat',
-  'ThePrimeagen/vim-be-good',
   'mbbill/undotree',
   'nvim-telescope/telescope.nvim',
   'kyazdani42/nvim-web-devicons',
   'rcarriga/nvim-notify',
   {('nvim-treesitter/nvim-treesitter'), build = ':TSUpdate' },
+  'ThePrimeagen/harpoon',
 
   --Telescope plugins
   'nvim-telescope/telescope-dap.nvim',
@@ -18,7 +18,6 @@ return {
 
   --Treesitter
   'nvim-treesitter/nvim-treesitter-textobjects',
-  'm-demare/hlargs.nvim',
   'windwp/nvim-ts-autotag',
   { 'Wansmer/treesj', config = function()
     require('treesj').setup({ use_default_keymaps = false })
@@ -33,8 +32,6 @@ return {
   },
 
   --Motion
-  'ThePrimeagen/harpoon',
-  --'ggandor/lightspeed.nvim',
 
   --Code Edition
   'windwp/nvim-autopairs',
@@ -43,15 +40,12 @@ return {
   'tpope/vim-unimpaired',
 
   --Git
-  'tpope/vim-fugitive',
   'lewis6991/gitsigns.nvim',
 
   --UI
   'nvim-lualine/lualine.nvim',
   'lukas-reineke/indent-blankline.nvim',
   'nvim-tree/nvim-tree.lua',
-  'yamatsum/nvim-cursorline',
-  'kosayoda/nvim-lightbulb',
   {'akinsho/toggleterm.nvim', version = '*', config = function() require('toggleterm').setup() end},
   {
     'utilyre/barbecue.nvim',
@@ -64,9 +58,6 @@ return {
   --Coments
   'tpope/vim-commentary',
 
-  --Snippets
-  'L3MON4D3/LuaSnip',
-  'rafamadriz/friendly-snippets',
 
   --Debug
   'mfussenegger/nvim-dap',
@@ -74,31 +65,32 @@ return {
 
   --lsp and autocompletion 
   {
-	  'VonHeikemen/lsp-zero.nvim',
-	  dependencies = {
-		  -- LSP Support
-		  {'neovim/nvim-lspconfig'},
-		  {'williamboman/mason.nvim'},
-		  {'williamboman/mason-lspconfig.nvim'},
+    'VonHeikemen/lsp-zero.nvim',
+    dependencies = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},
+      {'williamboman/mason.nvim'},
+      {'williamboman/mason-lspconfig.nvim'},
 
-		  -- Autocompletion
-		  {'hrsh7th/nvim-cmp'},
-		  {'hrsh7th/cmp-buffer'},
-		  {'hrsh7th/cmp-path'},
-		  {'saadparwaiz1/cmp_luasnip'},
-		  {'hrsh7th/cmp-nvim-lsp'},
-		  {'hrsh7th/cmp-nvim-lua'},
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},
+      {'hrsh7th/cmp-buffer'},
+      {'hrsh7th/cmp-path'},
+      {'saadparwaiz1/cmp_luasnip'},
+      {'hrsh7th/cmp-nvim-lsp'},
+      {'hrsh7th/cmp-nvim-lua'},
 
-		  -- Snippets
-		  {'L3MON4D3/LuaSnip'},
-		  {'rafamadriz/friendly-snippets'},
-	  }
-},
+      -- Snippets
+      {'L3MON4D3/LuaSnip'},
+      {'rafamadriz/friendly-snippets'},
+    }
+  },
+
   'ray-x/lsp_signature.nvim',
   'jose-elias-alvarez/null-ls.nvim',
   'jose-elias-alvarez/typescript.nvim',
+
   { 'folke/trouble.nvim', config = function() require('trouble').setup { } end },
-  { 'weilbith/nvim-code-action-menu', cmd = 'CodeActionMenu' },
 
   --Preview
   'frabjous/knap',
