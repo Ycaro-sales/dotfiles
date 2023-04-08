@@ -1,3 +1,5 @@
+local vim = vim
+
 vim.keymap.set("n","gd", "<cmd>lua vim.lsp.buf.definition()<CR>zz")
 vim.keymap.set("n","gr", "<cmd>lua vim.lsp.buf.references() <CR>zz")
 vim.keymap.set("n","gi", "<cmd>Telescope lsp_implementations<CR>zz")
@@ -23,6 +25,8 @@ vim.keymap.set("s","<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>")
 vim.keymap.set("i","<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
 vim.keymap.set("s","<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>")
 
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
 --keybinds nvim-tree
 vim.keymap.set("n","<leader>e","<cmd>NvimTreeToggle<CR>")
 
@@ -45,8 +49,6 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
 
 vim.keymap.set("i", "<C-c>", "<Esc>")
-
-vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 vim.keymap.set("n","<leader>g", "<cmd>FloatermNew lazygit<CR>")
 

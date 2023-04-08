@@ -1,6 +1,7 @@
 require'nvim-treesitter.configs'.setup {
   highlight ={
-    enable = true
+    enable = true,
+    additional_vim_regex_highlighting = false
   },
   autotag = {
     enable = true,
@@ -54,10 +55,10 @@ require'nvim-treesitter.configs'.setup {
     swap = {
       enable = true,
       swap_next = {
-        ["<leader>a"] = "@parameter.inner",
+        ["<leader>a"] = "@function.inner",
       },
       swap_previous = {
-        ["<leader>A"] = "@parameter.inner",
+        ["<leader>A"] = "@function.inner",
       },
      },
 

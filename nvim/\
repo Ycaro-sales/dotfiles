@@ -64,8 +64,8 @@ require("telescope").setup {
         },
       },
     },
-    ["ui_select"] = {
-      require("telescope.themes").get_dropdown{},
+    ["ui-select"] = {
+      require("telescope.themes").get_dropdown {},
     }
   },
   pickers = {

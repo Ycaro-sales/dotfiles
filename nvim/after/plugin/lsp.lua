@@ -20,25 +20,25 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
   ['<C-y>'] = cmp.mapping.confirm({ select = true }),
   ["<C-Space>"] = cmp.mapping.complete(),
-  ["<Tab>"] = cmp.mapping(function(fallback)
-    if cmp.visible() then
-      cmp.select_next_item()
-    elseif luasnip.expand_or_jumpable() then
-      luasnip.expand_or_jump()
-    else
-      fallback()
-    end
-  end, { "i", "s" }),
+  -- ["<Tab>"] = cmp.mapping(function(fallback)
+  --   if cmp.visible() then
+  --     cmp.select_next_item()
+  --   elseif luasnip.expand_or_jumpable() then
+  --     luasnip.expand_or_jump()
+  --   else
+  --     fallback()
+  --   end
+  -- end, { "i", "s" }),
 
-  ["<S-Tab>"] = cmp.mapping(function(fallback)
-    if cmp.visible() then
-      cmp.select_prev_item()
-    elseif luasnip.jumpable(-1) then
-      luasnip.jump(-1)
-    else
-      fallback()
-    end
-  end, { "i", "s" }),
+  -- ["<S-Tab>"] = cmp.mapping(function(fallback)
+  --   if cmp.visible() then
+  --     cmp.select_prev_item()
+  --   elseif luasnip.jumpable(-1) then
+  --     luasnip.jump(-1)
+  --   else
+  --     fallback()
+  --   end
+  -- end, { "i", "s" }),
 
   ["<C-j>"] = cmp.mapping(function(fallback)
     if luasnip.jumpable(-1) then
@@ -47,11 +47,16 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
   end, {"i", "s"}),
 
   ["<C-k>"] = cmp.mapping(function(fallback)
+
     if luasnip.jumpable(1) then
       luasnip.jump(1)
     end
   end, {"i", "s"})
 })
+
+
+cmp_mappings['<Tab>'] = nil
+cmp_mappings['<S-Tab>'] = nil
 
 lsp.set_preferences({
   sign_icons = {}
@@ -75,10 +80,10 @@ cmp.event:on(
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
-  vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, opts)
+  vim.keymap.set("n", "<leader>w", function() vim.lsp.buf.workspace_symbol() end, opts)
   vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
-  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
+  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end, opts)
+  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next() end, opts)
 end)
 
 require("typescript").setup({
