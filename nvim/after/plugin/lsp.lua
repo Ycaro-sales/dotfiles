@@ -79,7 +79,7 @@ cmp.event:on(
 
 lsp.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
-
+  
   vim.keymap.set("n", "<leader>w", function() vim.lsp.buf.workspace_symbol() end, opts)
   vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
   vim.keymap.set("n", "[d", function() vim.diagnostic.goto_prev() end, opts)

@@ -4,6 +4,8 @@ require('nvim-ts-autotag').setup()
 --setup autopairs
 require("nvim-autopairs").setup {}
 
+require('lsp_signature').setup()
+
 require('rose-pine').setup({
      dark_variant = 'moon'
 })
@@ -16,11 +18,6 @@ require('lualine').setup{
     lualine_c = {},
     lualine_x = {'filetype'},
   }
-}
-
-require("toggleterm").setup{
-     open_mapping = [[<F1>]],
-     close_on_exit = true
 }
 
 require("trouble").setup {

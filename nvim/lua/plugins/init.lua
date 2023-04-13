@@ -1,4 +1,5 @@
 return {
+  --teste
   'nvim-lua/plenary.nvim',
   'tpope/vim-repeat',
   'mbbill/undotree',
@@ -10,17 +11,20 @@ return {
 
   --Telescope plugins
   'nvim-telescope/telescope-dap.nvim',
-  'nvim-telescope/telescope-ui-select.nvim',
   {
     'nvim-telescope/telescope-fzf-native.nvim',
     build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
   },
+  'nvim-telescope/telescope-file-browser.nvim',
 
   --Treesitter
   'nvim-treesitter/nvim-treesitter-textobjects',
   'windwp/nvim-ts-autotag',
   { 'Wansmer/treesj', config = function()
-    require('treesj').setup({ use_default_keymaps = false })
+    require('treesj').setup({
+      use_default_keymaps = false,
+      max_join_length = 300,
+    })
   end },
 
   --Help
@@ -31,13 +35,22 @@ return {
     end
   },
 
-  --Motion
-
   --Code Edition
   'windwp/nvim-autopairs',
   'mg979/vim-visual-multi',
-  { 'kylechui/nvim-surround', version = '*', config = function() require('nvim-surround').setup({ }) end },
+  {
+    'kylechui/nvim-surround',
+    version = '*',
+    config = function() require('nvim-surround').setup({ }) end,
+  },
   'tpope/vim-unimpaired',
+  {
+    'ThePrimeagen/refactoring.nvim',
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter"
+    }
+  },
 
   --Git
   'lewis6991/gitsigns.nvim',
@@ -46,7 +59,6 @@ return {
   'nvim-lualine/lualine.nvim',
   'lukas-reineke/indent-blankline.nvim',
   'nvim-tree/nvim-tree.lua',
-  {'akinsho/toggleterm.nvim', version = '*', config = function() require('toggleterm').setup() end},
   {
     'utilyre/barbecue.nvim',
     dependencies = { 'smiteshp/nvim-navic' },
@@ -94,10 +106,11 @@ return {
 
   --Preview
   'frabjous/knap',
-
+   
   --Colorschemes
+  'rebelot/kanagawa.nvim',
   'marko-cerovac/material.nvim',
-  'gruvbox-community/gruvbox',
+  'ellisonleao/gruvbox.nvim',
   'folke/tokyonight.nvim',
   'neanias/everforest-nvim',
   'ful1e5/onedark.nvim',

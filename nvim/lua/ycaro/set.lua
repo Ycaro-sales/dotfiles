@@ -41,23 +41,23 @@ vim.diagnostic.config({
 vim.o.updatetime = 250
 
 
-require("indent_blankline").setup {
-  -- for example, context is off by default, use this to turn it on
-  show_current_context = false,
-  show_current_context_start = false,
-  show_end_of_line = false,
-}
+-- require("indent_blankline").setup {
+--   -- for example, context is off by default, use this to turn it on
+--   show_current_context = false,
+--   show_current_context_start = false,
+--   show_end_of_line = false,
+-- }
 
 vim.lsp.handlers['textDocument/publishDiagnostics'] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics,
-    {
-        underline = true,
-        virtual_text = {
-            spacing = 5,
-            severity_limit = 'Warning',
-        },
-        update_in_insert = true,
-    }
+  vim.lsp.diagnostic.on_publish_diagnostics,
+  {
+    underline = true,
+    virtual_text = {
+      spacing = 5,
+      severity_limit = 'Warning',
+    },
+    update_in_insert = true,
+  }
 )
 
 require("everforest").setup({

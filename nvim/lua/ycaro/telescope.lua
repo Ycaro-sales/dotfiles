@@ -72,7 +72,7 @@ require("telescope").setup {
     lsp_references = {show_line = false},
   }
 }
-require("telescope").load_extension("ui-select")
+require("telescope").load_extension "file_browser"
 require("telescope").load_extension("harpoon")
 require("telescope").load_extension("fzf")
 require("telescope").load_extension('dap')

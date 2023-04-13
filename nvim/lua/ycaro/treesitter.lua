@@ -1,7 +1,6 @@
-require'nvim-treesitter.configs'.setup {
+require 'nvim-treesitter.configs'.setup {
   highlight ={
     enable = true,
-    additional_vim_regex_highlighting = false
   },
   autotag = {
     enable = true,
@@ -52,17 +51,7 @@ require'nvim-treesitter.configs'.setup {
       include_surrounding_whitespace = true,
     },
 
-    swap = {
-      enable = true,
-      swap_next = {
-        ["<leader>a"] = "@function.inner",
-      },
-      swap_previous = {
-        ["<leader>A"] = "@function.inner",
-      },
-     },
-
-     move = {
+    move = {
       enable = true,
       set_jumps = true, -- whether to set jumps in the jumplist
       goto_next_start = {
@@ -81,9 +70,9 @@ require'nvim-treesitter.configs'.setup {
         ["[M"] = "@function.outer",
         ["[]"] = "@class.outer",
       },
-     },
+    },
 
-     lsp_interop = {
+    lsp_interop = {
       enable = true,
       border = 'none',
       peek_definition_code = {
