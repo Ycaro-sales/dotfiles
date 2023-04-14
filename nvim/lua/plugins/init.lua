@@ -58,14 +58,12 @@ return {
   --UI
   'nvim-lualine/lualine.nvim',
   'lukas-reineke/indent-blankline.nvim',
-  'nvim-tree/nvim-tree.lua',
+  -- 'nvim-tree/nvim-tree.lua',
   {
     'utilyre/barbecue.nvim',
     dependencies = { 'smiteshp/nvim-navic' },
     config = function() require('barbecue').setup() end,
-  },
-  'ldelossa/nvim-ide',
-  'voldikss/vim-floaterm',
+  }, 'voldikss/vim-floaterm',
 
   --Coments
   'tpope/vim-commentary',
