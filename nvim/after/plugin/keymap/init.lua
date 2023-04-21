@@ -40,7 +40,7 @@ vim.api.nvim_set_keymap("n", "<leader>ri", [[ <Cmd>lua require('refactoring').re
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 
 --keybinds nvim-tree
-vim.keymap.set("n", "<leader>e", "<cmd>Telescope file_browser<CR>")
+vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")
 
 vim.keymap.set("n", "<leader>di", "<Cmd>lua require('dapui').toggle()<CR>")
 

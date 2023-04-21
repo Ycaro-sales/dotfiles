@@ -6,10 +6,6 @@ require("nvim-autopairs").setup {}
 
 require('lsp_signature').setup()
 
-require('rose-pine').setup({
-     dark_variant = 'moon'
-})
-
 require("luasnip.loaders.from_vscode").lazy_load()
 
 require('lualine').setup{
@@ -19,6 +15,16 @@ require('lualine').setup{
     lualine_x = {'filetype'},
   }
 }
+
+require("nvim-tree").setup({
+  sort_by = "case_sensitive",
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
 
 require("trouble").setup {
     position = "bottom", -- position of the list can be: bottom, top, left, right

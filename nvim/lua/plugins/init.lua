@@ -15,7 +15,7 @@ return {
     'nvim-telescope/telescope-fzf-native.nvim',
     build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
   },
-  'nvim-telescope/telescope-file-browser.nvim',
+  'nvim-tree/nvim-tree.lua',
 
   --Treesitter
   'nvim-treesitter/nvim-treesitter-textobjects',
@@ -58,7 +58,7 @@ return {
   --UI
   'nvim-lualine/lualine.nvim',
   'lukas-reineke/indent-blankline.nvim',
-  -- 'nvim-tree/nvim-tree.lua',
+  'nvim-tree/nvim-tree.lua',
   {
     'utilyre/barbecue.nvim',
     dependencies = { 'smiteshp/nvim-navic' },
@@ -68,10 +68,9 @@ return {
   --Coments
   'tpope/vim-commentary',
 
-
   --Debug
   'mfussenegger/nvim-dap',
-  'rcarriga/nvim-dap-ui',
+  -- 'rcarriga/nvim-dap-ui',
 
   --lsp and autocompletion 
   {
@@ -103,14 +102,10 @@ return {
   { 'folke/trouble.nvim', config = function() require('trouble').setup { } end },
 
   --Preview
-  'frabjous/knap',
+  -- 'frabjous/knap',
    
   --Colorschemes
-  'rebelot/kanagawa.nvim',
-  'marko-cerovac/material.nvim',
   'ellisonleao/gruvbox.nvim',
-  'folke/tokyonight.nvim',
   'neanias/everforest-nvim',
   'ful1e5/onedark.nvim',
-  { 'rose-pine/neovim', name = 'rose-pine' },
 }
