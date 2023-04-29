@@ -16,6 +16,15 @@ require('lualine').setup{
   }
 }
 
+require("nvim-navbuddy").setup{
+
+  lsp = {
+    auto_attach = true,
+  }
+}
+
+
+
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
   renderer = {

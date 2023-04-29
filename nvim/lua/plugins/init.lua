@@ -8,7 +8,7 @@ return {
   'rcarriga/nvim-notify',
   {('nvim-treesitter/nvim-treesitter'), build = ':TSUpdate' },
   'ThePrimeagen/harpoon',
-
+  'github/copilot.vim',
   --Telescope plugins
   'nvim-telescope/telescope-dap.nvim',
   {
@@ -64,6 +64,8 @@ return {
     dependencies = { 'smiteshp/nvim-navic' },
     config = function() require('barbecue').setup() end,
   }, 'voldikss/vim-floaterm',
+  'smiteshP/nvim-navbuddy',
+  'MunifTanjim/nui.nvim',
 
   --Coments
   'tpope/vim-commentary',
@@ -73,6 +75,7 @@ return {
   -- 'rcarriga/nvim-dap-ui',
 
   --lsp and autocompletion 
+  
   {
     'VonHeikemen/lsp-zero.nvim',
     dependencies = {
@@ -108,4 +111,5 @@ return {
   'ellisonleao/gruvbox.nvim',
   'neanias/everforest-nvim',
   'ful1e5/onedark.nvim',
+  { 'rose-pine/neovim', name = 'rose-pine' },
 }
