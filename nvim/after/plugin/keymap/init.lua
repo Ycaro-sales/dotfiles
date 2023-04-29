@@ -3,7 +3,7 @@ local vim = vim
 vim.keymap.set("n", "gd", "<cmd>Telescope lsp_definitions <CR>zz")
 vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references <CR>zz")
 vim.keymap.set("n", "gi", "<cmd>Telescope lsp_implementations<CR>zz")
-vim.keymap.set("n", "<leader>o", "<cmd>Telescope lsp_document_symbols<CR>")
+vim.keymap.set("n", "<leader>o", "<cmd>Navbuddy<CR>")
 
 vim.keymap.set("n", "<leader>s", "<cmd>TSJToggle<CR>")
 

@@ -1,10 +1,13 @@
 --vim.g.tokyonight_transparent_sidebar = true
 --vim.g.tokyonight_transparent = true
 --vim.opt.background = "dark"
+require('rose-pine').setup({
+})
+
 function ColorMyPencils(color)
-  color = color or "gruvbox"
+  color = color or "everforest"
   vim.cmd.colorscheme(color)  
-  vim.api.nvim_set_hl(0, "Normal", {bg = "none"})
+  
 end
 
 ColorMyPencils()
